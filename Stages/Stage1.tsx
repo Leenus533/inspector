@@ -20,5 +20,9 @@ export const Stage1Info = ({ setStage }) => {
 }
 
 export const Stage1Playground = ({ setStage }) => {
-	return <Box></Box>
+	return (
+		<Box>
+			<Box></Box>
+		</Box>
+	)
 }
