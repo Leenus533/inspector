@@ -6,23 +6,23 @@ import { StageObjectivePlayground } from "../Stages/StageObjective"
 import { StageToolsPlayground } from "../Stages/StageTools"
 import { StageWelcomePlayground } from "../Stages/StageWelcome"
 
-const Playground = ({ stage }) => {
+const Playground = ({ stage, setStage }) => {
 	return (
 		<Box
 			id={"Playground"}
 			sx={{
 				width: "calc(100% - 48px)",
-				height: "calc(100vh - 94px - 48px)",
+				minHeight: "calc(100vh - 100px - 48px)",
 				padding: "24px",
 				margin: "24px",
 				borderRadius: "24px",
 				border: "4px solid rgba(255, 255, 255, 0.5)",
 			}}>
-			{stage === -2 && <StageWelcomePlayground />}
-			{stage === -1 && <StageToolsPlayground />}
-			{stage === 0 && <StageObjectivePlayground />}
-			{stage === 1 && <Stage1Playground />}
-			{stage === 2 && <Stage2Playground />}
+			{stage === 0 && <StageWelcomePlayground setStage={setStage} />}
+			{stage === 1 && <StageToolsPlayground setStage={setStage} />}
+			{stage === 2 && <StageObjectivePlayground setStage={setStage} />}
+			{stage === 3 && <Stage1Playground setStage={setStage} />}
+			{stage === 4 && <Stage2Playground setStage={setStage} />}
 		</Box>
 	)
 }

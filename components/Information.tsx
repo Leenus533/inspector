@@ -6,21 +6,21 @@ import { StageObjectiveInfo } from "../Stages/StageObjective"
 import { StageToolsInfo } from "../Stages/StageTools"
 import { StageWelcomeInfo } from "../Stages/StageWelcome"
 
-const Information = ({ stage }) => {
+const Information = ({ stage, setStage }) => {
 	return (
 		<Box
 			id={"Information"}
 			sx={{
 				width: "calc(100% - 48px)",
-				height: "calc(100vh - 94px - 48px)",
+				minHeight: "calc(100vh - 100px - 48px)",
 				padding: "24px",
 				margin: "24px",
 			}}>
-			{stage === -2 && <StageWelcomeInfo />}
-			{stage === -1 && <StageToolsInfo />}
-			{stage === 0 && <StageObjectiveInfo />}
-			{stage === 1 && <Stage1Info />}
-			{stage === 2 && <Stage2Info />}
+			{stage === 0 && <StageWelcomeInfo setStage={setStage} />}
+			{stage === 1 && <StageToolsInfo setStage={setStage} />}
+			{stage === 2 && <StageObjectiveInfo setStage={setStage} />}
+			{stage === 3 && <Stage1Info setStage={setStage} />}
+			{stage === 4 && <Stage2Info setStage={setStage} />}
 		</Box>
 	)
 }

@@ -3,12 +3,12 @@ import React from "react"
 
 const NavBar = ({ stage, setStage, totalStages }) => {
 	const previousStage = () => {
-		if (stage > -2) {
+		if (stage > 0) {
 			setStage(stage - 1)
 		}
 	}
 	const nextStage = () => {
-		if (stage >= totalStages) return
+		if (stage === totalStages) return
 		setStage(stage + 1)
 	}
 
@@ -24,15 +24,15 @@ const NavBar = ({ stage, setStage, totalStages }) => {
 				</Typography>
 				<Box>
 					<Typography variant="h6" align="center">
-						{stage === -2
+						{stage === 0
 							? "Welcome"
-							: stage === -1
+							: stage === 1
 							? "Tools"
-							: stage === 0
+							: stage === 2
 							? "Objective"
 							: stage === totalStages
 							? "Completed"
-							: `Stage ${stage}`}
+							: `Mission : ${stage - 2}`}
 					</Typography>
 					<Box
 						sx={{

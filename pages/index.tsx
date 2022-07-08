@@ -6,27 +6,29 @@ import NavBar from "../components/NavBar"
 import { useState } from "react"
 import Information from "../components/Information"
 import Playground from "../components/Playground"
+import { LinearProgress } from "@mui/material"
 
 export default function Index() {
-	const [stage, setStage] = useState(-2)
-	const totalStages = 3
+	const [stage, setStage] = useState(0)
+	const totalStages = 5
 
 	return (
 		<Box>
 			<NavBar stage={stage} setStage={setStage} totalStages={totalStages} />
+			<LinearProgress variant="determinate" value={(stage / totalStages) * 100} />
 			<Box
 				sx={{
 					display: "flex",
 
-					height: "calc(100vh - 94px)",
+					minHeight: "calc(100vh - 100px)",
 					"@media (max-width: 700px)": {
 						flexDirection: "column",
 					},
 				}}>
 				{stage !== totalStages ? (
 					<>
-						<Information stage={stage} />
-						<Playground stage={stage} />{" "}
+						<Information setStage={setStage} stage={stage} />
+						<Playground setStage={setStage} stage={stage} />{" "}
 					</>
 				) : (
 					<Typography p={8} m={"0 auto"} textAlign={"center"} variant={"h3"}>
