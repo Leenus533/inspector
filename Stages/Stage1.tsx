@@ -68,11 +68,11 @@ export const Stage1Playground = ({ setStage }) => {
 					style={{
 						position: "absolute",
 					}}
-					src="/images/rock.png"
+					src="/images/rock.webp"
 					width="400px"
 					height="600px"
 				/>
-				<img src={`/images/rock-code.jpg`} width="400px" height="400px" />
+				<img src={`/images/rock-code.webp`} width="400px" height="400px" />
 			</Box>
 		</Box>
 	)
