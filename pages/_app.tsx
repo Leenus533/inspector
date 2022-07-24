@@ -17,7 +17,12 @@ export default function MyApp(props) {
 	return (
 		<CacheProvider value={emotionCache}>
 			<Head>
+				<title>Mr.Inspector</title>
 				<meta name="viewport" content="initial-scale=1, width=device-width" />
+				<meta
+					name="description"
+					content="This is Mr.Inspector training class. Its is a quick and short introduction to get comfortable using the browser dev tools."
+				/>
 			</Head>
 			<ThemeProvider theme={theme}>
 				<CssBaseline />
