@@ -3,7 +3,7 @@ import { useResizeObserver } from "@mantine/hooks"
 import { useEffect, useState } from "react"
 import { checkPos } from "../components/positions"
 
-export const Stage2Info = ({ setStage }) => {
+export const Stage4Info = ({ setStage }) => {
 	const [completed, setCompleted] = useState(false)
 	const handleClick = () => {
 		setCompleted(checkPos())
@@ -11,10 +11,11 @@ export const Stage2Info = ({ setStage }) => {
 	return (
 		<Box>
 			<Typography textAlign={"center"} variant={"h4"}>
-				Mission 2
+				Mission 4
 			</Typography>
 			<Typography variant={"body1"}>
-				Goal of the current mission is to edit the nav element so that the "blue box" is at the same position as the red box.
+				Goal of the current mission is to find the measurements of the red box and to make sure that the blue box also has the
+				same measurements.
 			</Typography>
 			<Box
 				sx={{
@@ -39,7 +40,7 @@ export const Stage2Info = ({ setStage }) => {
 					}}
 					p={4}>
 					<Typography variant={"h6"}>Congrats you have completed the mission!</Typography>
-					<Button onClick={() => setStage(5)} variant={"outlined"}>
+					<Button onClick={() => setStage(7)} variant={"outlined"}>
 						Next Mission
 					</Button>
 				</Box>
@@ -48,32 +49,34 @@ export const Stage2Info = ({ setStage }) => {
 	)
 }
 
-export const Stage2Playground = ({ setStage }) => {
+export const Stage4Playground = ({ setStage }) => {
 	return (
-		<Box>
-			<Box component={"nav"} sx={{}}>
-				<Typography variant="h2"> Title/Logo </Typography>
-				<Box
-					id="task"
-					style={{
-						width: "80px",
-						height: "80px",
-						backgroundColor: "rgba(0, 0, 255, 1)",
-						zIndex: "1",
-					}}
-				/>
-				<Box
-					id="target"
-					style={{
-						width: "80px",
-						height: "80px",
-						backgroundColor: "rgba(255, 0, 0, 0.5)",
-						position: "absolute",
-						right: "0",
-						top: "0",
-					}}
-				/>
-			</Box>
+		<Box
+			sx={{
+				display: "flex",
+				justifyContent: "center",
+				alignItems: "center",
+				minHeight: "60vh",
+			}}>
+			<Box
+				id="task"
+				style={{
+					width: "80px",
+					height: "80px",
+					backgroundColor: "rgba(0, 0, 255, 1)",
+					position: "absolute",
+					zIndex: "1",
+				}}
+			/>
+			<Box
+				id="target"
+				style={{
+					width: "247px",
+					height: "264px",
+					backgroundColor: "rgba(255, 0, 0, 0.5)",
+					position: "absolute",
+				}}
+			/>
 		</Box>
 	)
 }

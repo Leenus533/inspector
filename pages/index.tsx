@@ -10,7 +10,7 @@ import { LinearProgress } from "@mui/material"
 
 export default function Index() {
 	const [stage, setStage] = useState(0)
-	const totalStages = 5
+	const totalStages = 8
 
 	return (
 		<Box>
