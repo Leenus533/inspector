@@ -14,8 +14,8 @@ export const Stage5Info = ({ setStage }) => {
 				Mission 5
 			</Typography>
 			<Typography variant={"body1"}>
-				You need another secret key to opent the door. The secret key is located within localStorage Goal of the current mission
-				is to find the key that is hidden in the local storage of the browser.
+				You need another secret key to opent the door. The secret key is hidden within localStorage . The Goal of the current
+				mission is to find the key that is hidden .
 			</Typography>
 			<Box
 				my={2}

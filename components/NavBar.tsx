@@ -8,7 +8,7 @@ const NavBar = ({ stage, setStage, totalStages }) => {
 		}
 	}
 	const nextStage = () => {
-		if (stage === totalStages) return
+		if (stage === totalStages - 1) return
 		setStage(stage + 1)
 	}
 
