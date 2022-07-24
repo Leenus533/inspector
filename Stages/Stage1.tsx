@@ -64,6 +64,7 @@ export const Stage1Playground = ({ setStage }) => {
 					position: "relative",
 				}}>
 				<img
+					loading="eager"
 					style={{
 						position: "absolute",
 					}}
