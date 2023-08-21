@@ -66,7 +66,7 @@ export const Stage5Playground = ({ setStage }) => {
 				alignItems: "center",
 				justifyContent: "center",
 			}}>
-			<Image src="/images/door.webp" height={"600px"} width={"300px"} />
+			<Image alt="door" src="/images/door.webp" height={"600"} width={"300"} />
 		</Box>
 	)
 }

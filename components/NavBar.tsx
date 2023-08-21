@@ -13,11 +13,14 @@ const NavBar = ({ stage, setStage, totalStages }) => {
 	}
 
 	return (
-		<AppBar sx={{ height: "94px", boxShadow: "0 5px 10px rgba(0 0 0 / 40%)", padding: "8px" }} position="static">
+		<AppBar sx={{ minHeight: "94px", boxShadow: "0 5px 10px rgba(0 0 0 / 40%)", padding: "8px" }} position="static">
 			<Box
 				sx={{
 					display: "flex",
 					alignItems: "center",
+					"@media (max-width: 600px)": {
+						flexDirection: "column",
+					},
 				}}>
 				<Typography margin={"0 auto"} variant="h2" component={"h1"} textAlign={"center"}>
 					Mr.Inspector

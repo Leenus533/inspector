@@ -51,11 +51,11 @@ export const StageToolsPlayground = ({ setStage }) => {
 			<Typography py={2} my={2} align="center" variant="h6">
 				Dev Tools
 			</Typography>
-			<Image src="/images/devtools.webp" width={1280} height={720} />
+			<Image alt="devtools" src="/images/devtools.webp" width={1280} height={720} />
 			<Typography py={2} my={2} align="center" variant="h6">
 				Editing Styles - Making Title color red
 			</Typography>
-			<Image src="/images/editingstyles.webp" width={1236} height={150} />
+			<Image alt="devtools" src="/images/editingstyles.webp" width={1236} height={150} />
 		</Box>
 	)
 }

@@ -4,7 +4,14 @@ import Image from "next/image"
 export const StageWelcomeInfo = ({ setStage }) => {
 	return (
 		<Box>
-			<Typography m={3} align="center" variant={"h2"}>
+			<Typography
+				sx={{
+					"@media (max-width: 600px)": {
+						fontSize: "3rem",
+					},
+				}}
+				align="center"
+				variant={"h2"}>
 				Welcome to Mr.Inspector's Training Class!
 			</Typography>
 			<Box
@@ -57,14 +64,15 @@ export const StageWelcomePlayground = ({ setStage }) => {
 		<Box
 			sx={{
 				display: "flex",
+				contain: "content",
 				alignItems: "center",
 				justifyContent: "center",
-				height: "100%",
-				width: "100%",
+				overflow: "hidden",
 			}}>
 			<Image
-				width={"785px"}
-				height={"486px"}
+				alt="Inspector"
+				width={"785"}
+				height={"486"}
 				src={"https://www.creativetourist.com/app/uploads/2019/12/b181a1599324b946068bcc1e51a4281b-785x486.jpg"}
 			/>
 		</Box>
