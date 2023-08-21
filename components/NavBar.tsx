@@ -51,6 +51,7 @@ const NavBar = ({ stage, setStage, totalStages }) => {
 							Previous
 						</Button>
 						<Button
+							disabled={stage === totalStages}
 							sx={{
 								margin: "4px",
 							}}
